@@ -27,4 +27,3 @@ Use this library to record chrome tab:
 https://developer.chrome.com/extensions/tabCapture
 
 <a href="https://www.thomaslindauer.com" target="blank">Team page<a>
-www.thomaslindauer.com
