@@ -25,7 +25,7 @@ var audioManager = (function(){
 				fd.append('data', wavBlob);
 				$.ajax({
 					type: 'POST',
-					url: 'https://thomaslindauer.com/FindAnySong/identify.php',
+					url: 'URL_AUTH_AND_RECOGNIZE',
 					data: fd,
 					processData: false,
 					contentType: false,
