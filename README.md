@@ -1,6 +1,6 @@
 # BeatFinder
 
-https://chrome.google.com/webstore/detail/beatfinder/ndenpgejcjbklgdhdhimhdbfbcnbknpg/reviews
+<a href="https://chrome.google.com/webstore/detail/beatfinder/ndenpgejcjbklgdhdhimhdbfbcnbknpg" target="blank">Store<a>
 
 Find the name of any music playing in your browser.
 
@@ -26,4 +26,5 @@ https://github.com/streamproc/MediaStreamRecorder
 Use this library to record chrome tab:
 https://developer.chrome.com/extensions/tabCapture
 
+<a href="https://www.thomaslindauer.com" target="blank">Team page<a>
 www.thomaslindauer.com
