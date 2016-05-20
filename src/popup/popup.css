@@ -1,0 +1,191 @@
+/* --- loading-anim CSS -- */
+
+.loader {
+  position: absolute;
+  margin-top: 11px;
+  width: 250px;
+  min-height: 250px;
+}
+
+.loader span {
+    border-radius: 30px;
+    border: 2px solid rgba(133, 191, 128, 0.43);
+    width: 60px;
+    height: 130px;
+    background: linear-gradient(-50deg, rgba(126, 239, 171, 0.36), rgba(59, 93, 70, 0.39));
+    position: absolute;
+    left: 0;
+    transform-origin: left right;
+    transform: rotate(90deg);
+    animation-name: load;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(0.49, 0.01, 0.51, 1.12);
+    animation-iteration-count: infinite;
+}
+.loader span:nth-child(1) {
+  left: 9px;
+  animation-delay: 0.05s;
+}
+.loader span:nth-child(2) {
+  left: 18px;
+  animation-delay: 0.1s;
+}
+.loader span:nth-child(3) {
+  left: 27px;
+  animation-delay: 0.15s;
+}
+.loader span:nth-child(4) {
+  left: 36px;
+  animation-delay: 0.2s;
+}
+.loader span:nth-child(5) {
+  left: 45px;
+  animation-delay: 0.25s;
+}
+.loader span:nth-child(6) {
+  left: 54px;
+  animation-delay: 0.3s;
+}
+.loader span:nth-child(7) {
+  left: 63px;
+  animation-delay: 0.35s;
+}
+.loader span:nth-child(8) {
+  left: 72px;
+  animation-delay: 0.4s;
+}
+.loader span:nth-child(9) {
+  left: 81px;
+  animation-delay: 0.45s;
+}
+.loader span:nth-child(10) {
+  left: 90px;
+  animation-delay: 0.5s;
+}
+.loader span:nth-child(11) {
+  left: 99px;
+  animation-delay: 0.55s;
+}
+.loader span:nth-child(12) {
+  left: 108px;
+  animation-delay: 0.6s;
+}
+.loader span:nth-child(13) {
+  left: 117px;
+  animation-delay: 0.65s;
+}
+.loader span:nth-child(14) {
+  left: 126px;
+  animation-delay: 0.7s;
+}
+.loader span:nth-child(15) {
+  left: 135px;
+  animation-delay: 0.75s;
+}
+.loader span:nth-child(16) {
+  left: 144px;
+  animation-delay: 0.8s;
+}
+.loader span:nth-child(17) {
+  left: 153px;
+  animation-delay: 0.85s;
+}
+.loader span:nth-child(18) {
+  left: 162px;
+  animation-delay: 0.9s;
+}
+.loader span:nth-child(19) {
+  left: 171px;
+  animation-delay: 0.95s;
+}
+.loader span:nth-child(20) {
+  left: 180px;
+  animation-delay: 1s;
+}
+@keyframes load {
+  to {
+    transform: rotate(450deg);
+  }
+}
+
+/* --- loading-anim CSS -- */
+#logoFlip{
+	height:78px;
+}
+#ACRCloudLogo{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#iconPicture{
+	width:78px;
+	height:33px;
+	margin-top: auto;
+    margin-bottom: auto;
+	margin-left:auto;
+	margin-right:auto;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-image:url("../../img/Icon_beat_finder_.png");
+}
+#iconPictureFlipped{
+	width:78px;
+	height:33px;
+	margin-top: auto;
+    margin-bottom: auto;
+	margin-left:auto;
+	margin-right:auto;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-image:url("../../img/Icon_beat_finder_Flipped.png");
+}
+#audioInfo{
+	margin-top:10px;
+	text-align:center;
+}
+ 
+#recordButton{
+    text-align: center;
+	font-weight: bold;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+#timeSlider{
+	position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 200px;
+}
+#logoFlip:hover{
+	cursor:pointer;
+}
+#audioInfo{
+	color: rgb(255, 255, 255);
+}
+
+html{
+	min-height: 130px;
+}
+
+body {
+	background: linear-gradient(rgb(107, 224, 190), #418A69);
+	font-family: Roboto,arial,sans-serif;
+	width:250px;
+}
+
+#external_links{
+    padding: 5px;
+}
+.infoBlock{
+	margin-bottom:5px;
+}
+#songTitle{
+	font-size: 15px;
+    padding-bottom: 2px;
+}
+.external_link{
+	text-decoration: none;
+}
