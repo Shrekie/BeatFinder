@@ -76,7 +76,7 @@
 		
 		if($responseJson->aud ==
 		/*
-			hen verifying a token, it is critical to ensure the audience field in the response exactly matches the client ID that you obtained in the Developers Console. 
+			When verifying a token, it is critical to ensure the audience field in the response exactly matches the client ID that you obtained in the Developers Console. 
 			It is absolutely vital to perform this step, because it is the mitigation for the confused deputy issue.	
 		*/
 		{
