@@ -1,5 +1,7 @@
 # BeatFinder
 
+https://chrome.google.com/webstore/detail/beatfinder/ndenpgejcjbklgdhdhimhdbfbcnbknpg/reviews
+
 Find the name of any music playing in your browser.
 
 Can't find the name of a song you've heard online:
@@ -23,3 +25,5 @@ https://github.com/streamproc/MediaStreamRecorder
 
 Use this library to record chrome tab:
 https://developer.chrome.com/extensions/tabCapture
+
+www.thomaslindauer.com
