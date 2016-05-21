@@ -106,7 +106,7 @@ var audioManager = (function(){
 		stopCapture:stopCapture,
 		isRecording:isRecording,
 		lastFoundSong:lastFoundSong
-	}
+	};
 	
 })();
 
