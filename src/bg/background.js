@@ -132,10 +132,10 @@ chrome.runtime.onMessage.addListener(
 			
 			chrome.tabs.query({active:true,currentWindow:true},function(tabArray){
 			
-				if (tabArray[0] === null){
+				if (tabArray[0] == null){
 					chrome.runtime.sendMessage({order: "lostFocus"});
 				}
-				else if (tabArray[0].url === null){
+				else if (tabArray[0].url == null){
 					
 					// Lost focus of current tab
 					chrome.runtime.sendMessage({order: "lostFocus"});
