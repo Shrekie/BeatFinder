@@ -20,10 +20,10 @@ https://www.acrcloud.com/
 Great library to use for recording of google tab stream:
 https://github.com/streamproc/MediaStreamRecorder
 
-Use this library to record chrome tab:
+Use this call to record chrome tab:
 https://developer.chrome.com/extensions/tabCapture
 
-I must also mention this for the wacky flip:
+I must also mention this for the flip:
 https://nnattawat.github.io/flip/
 
 <a href="https://chrome.google.com/webstore/detail/beatfinder/ndenpgejcjbklgdhdhimhdbfbcnbknpg" target="blank">Store<a>
