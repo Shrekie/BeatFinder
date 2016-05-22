@@ -29,3 +29,5 @@ https://nnattawat.github.io/flip/
 <a href="https://chrome.google.com/webstore/detail/beatfinder/ndenpgejcjbklgdhdhimhdbfbcnbknpg" target="blank">Store<a>
 
 <a href="https://www.thomaslindauer.com" target="blank">Team page<a>
+
+Pull requests are very cool
