@@ -13,6 +13,92 @@ var audioManager = (function(){
 	
 	var isRecording = false;
 	
+	var saveRecentSongs = (function(){
+		
+		/*
+			Stores a small cache of songs listened to previously on the chrome user.
+		*/
+		
+		var numberOfSongs = 5; // The number of songs stored.
+		var recentSongs = {lastSongsData:{lastSongs:[]}}; //The songs saved
+		var hasSongs = false;
+		var historyJson = null;
+		
+		var initLocalVar = function (callback){
+			
+			// Sets local variables to users chrome data.
+			
+			chrome.storage.sync.get("songArray", function (items) {
+				
+				saveRecentSongs.lastSongsData = {lastSongs:items.songArray};
+				if(saveRecentSongs.lastSongsData.lastSongs == null)
+					saveRecentSongs.lastSongsData.lastSongs = [];
+				if(saveRecentSongs.lastSongsData.lastSongs.length > 0){
+					saveRecentSongs.lastSongs=true
+				}
+				
+				callback();
+				
+			});
+			
+		}
+		
+		var chromeSave = function(parsedSongData){
+			
+			// Saves data to chrome user
+			
+			saveRecentSongs.lastSongsData.lastSongs.push({parsedObject:parsedSongData})
+			
+			//Only as many as specified
+			if(saveRecentSongs.lastSongsData.lastSongs.length > numberOfSongs)
+				saveRecentSongs.lastSongsData.lastSongs.shift();
+			
+			chrome.storage.sync.set({
+			"songArray": saveRecentSongs.lastSongsData.lastSongs,
+			}, function () {
+				chrome.runtime.sendMessage({order: "foundHistoryInfo",lastSongsData:audioManager.saveRecentSongs.lastSongsData});
+			});
+			
+		}
+		
+		var saveSong = function(parsedSongData){
+			
+			var seen = false;
+			$.each(saveRecentSongs.lastSongsData.lastSongs,function(index, val){
+				if(parsedSongData.metadata.music[0].title == val.parsedObject.metadata.music[0].title){
+					seen = true;
+				}
+			});
+			
+			if(!seen){
+				chromeSave(parsedSongData);
+			}
+			
+			initLocalVar(function(){});
+			
+		};
+		
+		var getSongMetadata = function(songName){
+			$.each(saveRecentSongs.lastSongsData.lastSongs,function(index, val){
+				if(songName == val.parsedObject.metadata.music[0].title){
+					chrome.runtime.sendMessage({order: "insertAudioData",audioStringData:val.parsedObject});
+				}
+			});
+		}
+		
+		return{
+			saveSong:saveSong,
+			lastSongs:hasSongs,
+			lastSongsData:recentSongs.lastSongsData,
+			initLocalVar:initLocalVar,
+			getSongMetadata:getSongMetadata
+		};
+		
+		
+		initLocalVar(function(){});
+		
+	})();
+	
 	var uploadBlob = function(wavBlob){
 		/*
 			Uploads wav file to server and waits for audio check
@@ -53,6 +139,7 @@ var audioManager = (function(){
 		else if(parsedObjectStringData.status.msg == "Success"){
 			audioManager.lastFoundSong = parsedObjectStringData;
 			chrome.runtime.sendMessage({order: "insertAudioData",audioStringData:parsedObjectStringData});
+			saveRecentSongs.saveSong(parsedObjectStringData);
 		}
 		else{
 			chrome.runtime.sendMessage({order: "nothingFound"});
@@ -105,7 +192,8 @@ var audioManager = (function(){
 		captureStream:captureStream,
 		stopCapture:stopCapture,
 		isRecording:isRecording,
-		lastFoundSong:lastFoundSong
+		lastFoundSong:lastFoundSong,
+		saveRecentSongs:saveRecentSongs
 	};
 	
 })();
@@ -119,9 +207,19 @@ var audioManager = (function(){
 chrome.runtime.onMessage.addListener(
 
   function(request, sender, sendResponse) {
+	
+	if(request.order == "sendSongData"){
+
+		audioManager.saveRecentSongs.getSongMetadata(request.songTitle);
+
+	}	
 	  
 	if(request.order == "checkStatus"){
-
+		
+		audioManager.saveRecentSongs.initLocalVar(function(){
+			chrome.runtime.sendMessage({order: "foundHistoryInfo",lastSongsData:audioManager.saveRecentSongs.lastSongsData});
+		});
+		
 		sendResponse({isRecording:audioManager.isRecording,lastFoundSong:audioManager.lastFoundSong});
 
 	}

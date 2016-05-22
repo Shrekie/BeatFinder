@@ -1,3 +1,4 @@
+$(window).load(function(){
 var popupUtil =(function(){
 	
 	/* 
@@ -6,22 +7,35 @@ var popupUtil =(function(){
 
 	
 	//Init
-	var sourceTemplate = $("#songInfoTemplate").html();
-	var template = Handlebars.compile(sourceTemplate);
+	
+	var sourceTemplateSongInfo = $("#songInfoTemplate").html();
+	var sourceTemplateSongInfoTemplate = Handlebars.compile(sourceTemplateSongInfo);
+	
+	var sourceTemplateHistoryInfo = $("#historyTemplate").html();
+	var sourceTemplateHistoryInfoTemplate = Handlebars.compile(sourceTemplateHistoryInfo);
 	
 	var displayText = function(textString){
 		$("#audioInfo").html("<div>"+textString+"</div>")
 		$("#audioInfo").slideDown("slow");
-	}
+		$("#HistoryList").slideDown("slow");
+	};
 	
-	var insertAudioData = function(audioData){
-		
-		var audioInfoHTML = template({audioData:audioData});
-			
+	var insertAudioData = function(audioDataInput){
+		var audioInfoHTML = sourceTemplateSongInfoTemplate(audioDataInput);
 		$("#audioInfo").html(audioInfoHTML);	
 		$("#audioInfo").slideDown("slow");
+		$("#HistoryList").slideDown("slow");
 
-	}
+	};
+	
+	var insertHistoryData = function(historyData){
+		var historyInfoHTML = sourceTemplateHistoryInfoTemplate(historyData);
+		$("#HistoryList").html(historyInfoHTML);	
+		$("#HistoryList").slideDown("slow");
+		$(".previewSong").click(function(){
+			chrome.runtime.sendMessage({order: "sendSongData",songTitle:$(this).find(".artistNamePreviewhidden").text()});
+		})
+	};
 	
 	var startRecord = function(onlyGraphical){
 		
@@ -35,20 +49,20 @@ var popupUtil =(function(){
 			$("#loading-anim").fadeIn("slow");
 			//$("#ACRCloudLogo").fadeIn("slow");
 			$("#audioInfo").slideUp( "slow", function() {});
+			$("#HistoryList").slideUp("slow");
 			
 		});
-	}
+	};
 	
 	return{
 		displayText:displayText,
 		insertAudioData:insertAudioData,
-		startRecord:startRecord
-	}
+		startRecord:startRecord,
+		insertHistoryData:insertHistoryData
+	};
 	
 })();
-
-
-$(window).load(function(){
+	
 	$("#logoFlip").flip({
 	  trigger: 'manual'
 	});
@@ -66,21 +80,31 @@ $(window).load(function(){
 	chrome.runtime.sendMessage({order: "checkStatus"}, function(response){
 		
 		// restores old status
-		
 		if(response.isRecording){
 			popupUtil.startRecord(true);
 		}
 		
 		if(response.lastFoundSong != null){
+	
 			popupUtil.insertAudioData(response.lastFoundSong);
 		}
 		
+		/*
+		if(response.lastSongsData.lastSongs.length != 0){
+			popupUtil.insertHistoryData(response.lastSongsData);
+		}
+		*/
+		
 	});
-});
+
 
 chrome.runtime.onMessage.addListener(
 
   function(request, sender, sendResponse) {
+	
+	if(request.order == "foundHistoryInfo"){
+		popupUtil.insertHistoryData(request.lastSongsData);
+	}
 	
 	if(request.order == "lostFocus"){
 		$("#loading-anim").fadeOut("slow");
@@ -90,13 +114,13 @@ chrome.runtime.onMessage.addListener(
 	
 	if(request.order == "pleaseTryAgain"){
 		$("#loading-anim").fadeOut("slow");
-		$("#ACRCloudLogo").fadeOut("slow");
+		//$("#ACRCloudLogo").fadeOut("slow");
 		popupUtil.displayText("Please try again");
 	}
 	
 	if(request.order == "nothingFound"){
 		$("#loading-anim").fadeOut("slow");
-		$("#ACRCloudLogo").fadeOut("slow");
+		//$("#ACRCloudLogo").fadeOut("slow");
 		popupUtil.displayText("Nothing found for this audio sample");
 	}
 	
@@ -110,4 +134,6 @@ chrome.runtime.onMessage.addListener(
 	}
 	
     
+ });
+ 
  });

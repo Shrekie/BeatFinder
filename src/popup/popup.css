@@ -1,12 +1,10 @@
 /* --- loading-anim CSS -- */
 
 .loader {
-  position: absolute;
   margin-top: 11px;
   width: 250px;
-  min-height: 250px;
+  min-height: 29px;
 }
-
 .loader span {
     border-radius: 30px;
     border: 2px solid rgba(133, 191, 128, 0.43);
@@ -109,11 +107,36 @@
 }
 
 /* --- loading-anim CSS -- */
+#HistoryList{
+	margin-top: 0px;
+	text-align:center;
+}
+.songTitleHistory{
+	color:white;
+	font-size:15px;
+	font-weight:bold;
+}
+.previewAlbum{
+	color: #0A5D3D;
+    font-weight: bold;
+}
+.previewSong:hover{
+	background-color:#2F6D56;
+	cursor:pointer;
+}
+.previewSong{
+	margin-bottom:5px;
+}
+.artistNamePreview{
+	color:white;
+	font-size:15px;
+}
 #logoFlip{
 	height:78px;
 }
 #ACRCloudLogo{
 	display: block;
+	margin-top:0px;
     margin-left: auto;
     margin-right: auto;
 }
