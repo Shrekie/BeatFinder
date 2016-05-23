@@ -2,8 +2,7 @@
 
 .loader {
     max-width: 200px;
-	height: 35px;
-    max-height: 30px;
+	height: 40px;
 }
 .loader span {
     border-radius: 30px;
