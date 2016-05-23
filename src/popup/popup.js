@@ -25,7 +25,6 @@ var popupUtil =(function(){
 		$("#audioInfo").html(audioInfoHTML);	
 		$("#audioInfo").slideDown("slow");
 		$("#HistoryList").slideDown("slow");
-
 	};
 	
 	var insertHistoryData = function(historyData){
@@ -49,7 +48,6 @@ var popupUtil =(function(){
 			$("#loading-anim").fadeIn("slow");
 			//$("#ACRCloudLogo").fadeIn("slow");
 			$("#audioInfo").slideUp( "slow", function() {});
-			$("#HistoryList").slideUp("slow");
 			
 		});
 	};
@@ -128,11 +126,15 @@ chrome.runtime.onMessage.addListener(
 	if(request.order == "insertAudioData"){
 		
 		$("#loading-anim").fadeOut("slow");
-		$("#logoFlip").flip(false);
+		$("#logoFlip").flip("toggle");
 		popupUtil.insertAudioData(request.audioStringData);
 		
 	}
-	
+	if(request.order == "insertAudioDataDontRemoveLoading"){
+		$("#logoFlip").flip("toggle");
+		popupUtil.insertAudioData(request.audioStringData);
+		
+	}
     
  });
  

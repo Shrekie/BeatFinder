@@ -1,15 +1,15 @@
 /* --- loading-anim CSS -- */
 
 .loader {
-  margin-top: 11px;
-  width: 250px;
-  min-height: 29px;
+    max-width: 200px;
+	height: 35px;
+    max-height: 30px;
 }
 .loader span {
     border-radius: 30px;
     border: 2px solid rgba(133, 191, 128, 0.43);
     width: 60px;
-    height: 130px;
+    height: 140px;
     background: linear-gradient(-50deg, rgba(126, 239, 171, 0.36), rgba(59, 93, 70, 0.39));
     position: absolute;
     left: 0;
@@ -107,6 +107,9 @@
 }
 
 /* --- loading-anim CSS -- */
+#mainPopup{
+	overflow:hidden;
+}
 #HistoryList{
 	margin-top: 0px;
 	text-align:center;
@@ -196,6 +199,7 @@ body {
 	background: linear-gradient(rgb(107, 224, 190), #418A69);
 	font-family: Roboto,arial,sans-serif;
 	width:250px;
+	overflow:hidden;
 }
 
 #external_links{
