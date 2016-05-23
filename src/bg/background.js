@@ -81,7 +81,7 @@ var audioManager = (function(){
 		var getSongMetadata = function(songName){
 			$.each(saveRecentSongs.lastSongsData.lastSongs,function(index, val){
 				if(songName == val.parsedObject.metadata.music[0].title){
-					chrome.runtime.sendMessage({order: "insertAudioDataDontRemoveLoading",audioStringData:val.parsedObject});
+					chrome.runtime.sendMessage({order: "insertAudioData",audioStringData:val.parsedObject});
 				}
 			});
 		}
@@ -111,7 +111,7 @@ var audioManager = (function(){
 				fd.append('data', wavBlob);
 				$.ajax({
 					type: 'POST',
-					url: 'https://thomaslindauer.com/FindAnySong/identify.php',
+					url: 'URL_AUTH_AND_RECOGNIZE',
 					data: fd,
 					processData: false,
 					contentType: false,
