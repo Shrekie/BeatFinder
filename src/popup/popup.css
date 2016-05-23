@@ -10,7 +10,7 @@
     border: 2px solid rgba(133, 191, 128, 0.43);
     width: 60px;
     height: 140px;
-    background: linear-gradient(-50deg, rgba(126, 239, 171, 0.36), rgba(59, 93, 70, 0.39));
+    background: linear-gradient(-50deg, rgba(126, 239, 171, 0.08), rgba(59, 93, 70, 0.26));
     position: absolute;
     left: 0;
     transform-origin: left right;
@@ -108,7 +108,9 @@
 
 /* --- loading-anim CSS -- */
 #mainPopup{
-	overflow:hidden;
+	max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
 }
 #HistoryList{
 	margin-top: 0px;
@@ -198,8 +200,7 @@ html{
 body {
 	background: linear-gradient(rgb(107, 224, 190), #418A69);
 	font-family: Roboto,arial,sans-serif;
-	width:250px;
-	overflow:hidden;
+	width:300px;
 }
 
 #external_links{
