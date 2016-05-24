@@ -107,7 +107,7 @@ var audioManager = (function(){
 		chrome.identity.getAuthToken({ 'interactive': true }, function(token) {
 				var fd = new FormData();
 				fd.append('token', token);
-				fd.append('fname', 'test.wav');
+				fd.append('fname', 'blob');
 				fd.append('data', wavBlob);
 				$.ajax({
 					type: 'POST',
@@ -131,9 +131,11 @@ var audioManager = (function(){
 		/*
 			Data retrieved by the server, send to popup
 		*/
-		var parsedObjectStringData = $.parseJSON(data);
 		
 		audioManager.isRecording = false;
+		
+		var parsedObjectStringData = $.parseJSON(data);
+
 		
 		if(parsedObjectStringData.status.msg == "fail"){
 			chrome.runtime.sendMessage({order: "pleaseTryAgain"});
@@ -146,6 +148,7 @@ var audioManager = (function(){
 		else{
 			chrome.runtime.sendMessage({order: "nothingFound"});
 		}
+		
 	};
 	
 	var stopCapture = function(){
@@ -153,6 +156,7 @@ var audioManager = (function(){
 		/*
 			Stops the capture of audio
 		*/
+		
 		mediaRecorder.stop();
 		streamObject.getAudioTracks()[0].stop();
 		
@@ -176,6 +180,7 @@ var audioManager = (function(){
 			
 			// create blob
 			streamObject = stream;
+			
 			mediaRecorder = new MediaStreamRecorder(streamObject);
 			mediaRecorder.mimeType = 'audio/wav';
 			
@@ -198,11 +203,6 @@ var audioManager = (function(){
 	};
 	
 })();
-
-
-
-
-
 
 //Entry point of all messages sent to background.
 chrome.runtime.onMessage.addListener(
