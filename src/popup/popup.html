@@ -81,19 +81,20 @@
 	<script id="songInfoTemplate" type="text/x-handlebars-template">
 
 		{{#each metadata.music}}
-			
-			<div id="generalInfo" class="infoBlock">
-				<div id="songTitle">{{title}}</div>
-				<div>{{label}}</div>
-				<div>{{release_date}}</div>
-				<div>{{album.name}}</div>
-			</div>
-			
+		
 			<div id="artists" class="infoBlock">
 				{{#each artists}}
-					<div>{{name}}</div>
+					<div class="artistName">{{name}}</div>
 				{{/each}}
 			</div>
+			
+			<div id="generalInfo" class="infoBlock">
+				<div class="songTitle">'{{title}}'</div>
+				<div class="albumNameShow">{{album.name}}</div>
+				<div>{{label}}</div>
+				<div>{{release_date}}</div>
+			</div>
+			
 			
 			<div id="genres" class="infoBlock">
 			{{#each genres}}
@@ -104,13 +105,13 @@
 			<div id="external_links">
 			
 				{{#if external_metadata.youtube.vid}}
-					<a target="_blank" href="https://www.youtube.com/watch?v={{external_metadata.youtube.vid}}" class="external_link">
-					<img src="../../icons/external_metadata_icons/youtube.png" alt="youtube" width="27" height="27"/>
+					<a target="_blank" href="https://www.youtube.com/watch?v={{external_metadata.youtube.vid}}" class="external_link" style="margin-right: 15px;">
+					<img src="../../icons/external_metadata_icons/youtube.png" alt="youtube" width="40" height="40"/>
 					</a>
 				{{/if}}
 				{{#if external_metadata.spotify.track.id}}
 					<a target="_blank" href="https://play.spotify.com/track/{{external_metadata.spotify.track.id}}" class="external_link">
-					<img src="../../icons/external_metadata_icons/spotify.png" alt="spotify" width="27" height="27"/>
+					<img src="../../icons/external_metadata_icons/spotify.png" alt="spotify" width="40" height="40"/>
 					</a>
 				{{/if}}
 			</div>

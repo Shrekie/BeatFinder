@@ -5,11 +5,11 @@
 	height: 40px;
 }
 .loader span {
-    border-radius: 30px;
+	border-radius: 35px;
     border: 2px solid rgba(133, 191, 128, 0.43);
     width: 60px;
     height: 140px;
-    background: linear-gradient(-50deg, rgba(126, 239, 171, 0.08), rgba(59, 93, 70, 0.26));
+    background: linear-gradient(-50deg, rgba(10, 103, 114, 0.18), rgba(49, 128, 121, 0.65));
     position: absolute;
     left: 0;
     transform-origin: left right;
@@ -116,21 +116,31 @@
 	margin-top: 0px;
 	text-align:center;
 }
+#artists{
+	color:white;
+	font-weight:bold;
+}
 .songTitleHistory{
 	color:white;
 	font-size:15px;
 	font-weight:bold;
 }
+.albumNameShow{
+	color: #0a6772;
+	font-size:15px;
+	padding-bottom:5px;
+}
 .previewAlbum{
-	color: #0A5D3D;
+	color: #0a6772;
     font-weight: bold;
+	padding-bottom: 5px;
 }
 .previewSong:hover{
 	background-color:rgba(255, 255, 255, 0.15);
 	cursor:pointer;
 }
 .previewSong{
-	margin-bottom:5px;
+	margin-bottom:8px;
 }
 .artistNamePreview{
 	color:white;
@@ -170,6 +180,8 @@
 }
 #audioInfo{
 	text-align:center;
+	font-weight: bold;
+    font-size: 15px;
 }
  
 #recordButton{
@@ -200,7 +212,7 @@ html{
 }
 
 body {    
-    background: #418A69;
+    background-color: #54CDC3;
 	font-family: Roboto,arial,sans-serif;
 	width:300px;
 }
@@ -211,9 +223,13 @@ body {
 .infoBlock{
 	margin-bottom:5px;
 }
-#songTitle{
-	font-size: 15px;
-    padding-bottom: 2px;
+.artistName{
+	font-size:25px;
+}
+.songTitle{
+	font-size: 20px;
+    padding-bottom: 5px;
+	font-weight:normal;
 }
 .external_link{
 	text-decoration: none;
