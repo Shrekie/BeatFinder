@@ -120,7 +120,6 @@ $(window).load(function(){
 			popupUtil.displayText("Nothing found for this audio sample");
 		}
 		
-
 		if(request.order == "insertAudioData"){
 			
 			$("#loading-anim").fadeOut("slow");
