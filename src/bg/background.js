@@ -107,7 +107,7 @@ var audioManager = (function(){
 		chrome.identity.getAuthToken({ 'interactive': true }, function(token) {
 				var fd = new FormData();
 				fd.append('token', token);
-				fd.append('fname', 'blob');
+				fd.append('fname', 'test');
 				fd.append('data', wavBlob);
 				$.ajax({
 					type: 'POST',
@@ -135,7 +135,6 @@ var audioManager = (function(){
 		audioManager.isRecording = false;
 		
 		var parsedObjectStringData = $.parseJSON(data);
-
 		
 		if(parsedObjectStringData.status.msg == "fail"){
 			chrome.runtime.sendMessage({order: "pleaseTryAgain"});
@@ -182,7 +181,7 @@ var audioManager = (function(){
 			streamObject = stream;
 			
 			mediaRecorder = new MediaStreamRecorder(streamObject);
-			mediaRecorder.mimeType = 'audio/wav';
+			mediaRecorder.mimeType = 'audio/webm';
 			
 			mediaRecorder.ondataavailable = function (blob) {
 				uploadBlob(blob);
