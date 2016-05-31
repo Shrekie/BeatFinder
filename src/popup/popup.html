@@ -22,7 +22,7 @@
 		
 		<!-- Loading elements -->
 		
-		<div id="audioInfo" style="margin-bottom: 5px;">
+		<div id="audioInfo">
 		</div>
 
 		<div id="HistoryList">
@@ -54,7 +54,7 @@
 		
 	
 	<script id="historyTemplate" type="text/x-handlebars-template">
-		<h2 style="border-bottom: rgba(47, 109, 86, 0.28);border-bottom-style: solid;margin-bottom: 10px;color:white;margin-top: 0px;padding-bottom: 10px;">RECORDED</h2>
+		<div style="border-bottom: rgba(47, 109, 86, 0.28);border-bottom-style: solid;margin-bottom: 10px;color:white;margin-top: 0px;padding-bottom: 10px;"></div>
 		<div id="allSongsPreview">
 			{{#each lastSongs}}
 				<div class="previewSong">
@@ -118,9 +118,9 @@
 		{{/each}}
 	</script>
 	
-	<script type="text/javascript" src="../../js/vendor/jquery.min.js"></script>
-	<script type="text/javascript" src="../../js/vendor/handlebars-v4.0.5.js"></script>
-	<script type="text/javascript" src="../../js/vendor/flip.js"></script>
+	<script type="text/javascript" src="../vendor/jquery.min.js"></script>
+	<script type="text/javascript" src="../vendor/handlebars-v4.0.5.js"></script>
+	<script type="text/javascript" src="../vendor/flip.js"></script>
 	<script type="text/javascript" src="popup.js"></script>
 	
 </body>
