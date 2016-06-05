@@ -107,10 +107,16 @@
 
 /* --- loading-anim CSS -- */
 #mainPopup{
-	max-width: 250px;
+	box-shadow: 3px 10px 79px 3px rgb(0, 0, 0);
+    background: url("../../img/pattern.png");
+    max-width: 270px;
     margin-left: auto;
     margin-right: auto;
-	max-height: 800px;
+    max-height: 800px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(29, 197, 184);
+    border-radius: 46px;
 }
 #HistoryList{
 	margin-top: 0px;
@@ -141,6 +147,9 @@
 }
 .previewSong{
 	margin-bottom:12px;
+	padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
 }
 .artistNamePreview{
 	color:white;
@@ -148,11 +157,9 @@
 	font-weight: lighter;
 }
 #logoFlip{
+	box-shadow: 3px 10px 72px -9px rgba(0,0,0,0.75);
 	height:78px;
 	border-radius: 50px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: rgba(255, 255, 255, 0.3);
     margin-bottom: 10px;
 }
 #ACRCloudLogo{
@@ -184,9 +191,13 @@
 	background-image:url("../../img/Icon_beat_finder_Flipped.png");
 }
 #audioInfo{
+	color: rgb(255, 255, 255);
+	padding-top: 10px;
 	text-align:center;
 	font-weight: bold;
     font-size: 15px;
+	padding: 10px;
+	padding-bottom: 0px;
 }
  
 #recordButton{
@@ -206,10 +217,6 @@
 }
 #logoFlip:hover{
 	cursor:pointer;
-	border-color: rgb(71, 169, 161);
-}
-#audioInfo{
-	color: rgb(255, 255, 255);
 }
 
 html{
@@ -220,7 +227,7 @@ html{
 body {    
     background-color: #54CDC3;
 	font-family: Roboto,arial,sans-serif;
-	width:300px;
+	width:270px;
 }
 
 #external_links{
