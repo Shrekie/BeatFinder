@@ -1,5 +1,4 @@
 # BeatFinder
-
 Find the name of any music playing in your browser.
 
 Can't find the name of a song you've heard online:
@@ -18,6 +17,7 @@ No audio files are stored, they are only processed to retrieve song name results
 Music Recognition by ACRCloud
 https://www.acrcloud.com/
 
+
 Great library to use for recording of google tab stream:
 https://github.com/streamproc/MediaStreamRecorder
 
@@ -27,11 +27,18 @@ https://developer.chrome.com/extensions/tabCapture
 I must also mention this for the flip:
 https://nnattawat.github.io/flip/
 
+
+
 <a href="https://chrome.google.com/webstore/detail/beatfinder/ndenpgejcjbklgdhdhimhdbfbcnbknpg" target="blank">Store<a>
 
 <a href="https://www.thomaslindauer.com" target="blank">Team page<a>
 
+
+
 Here is an article i wrote about this project
 https://www.acrcloud.com/blog/how-to-make-a-chrome-music-finder-extension
+
+<img src="http://i.imgur.com/ifMIRXA.gif"/>
+
 
 Pull requests are very cool
