@@ -38,7 +38,7 @@ https://nnattawat.github.io/flip/
 Here is an article i wrote about this project
 https://www.acrcloud.com/blog/how-to-make-a-chrome-music-finder-extension
 
-<img src="http://i.imgur.com/ifMIRXA.gif"/>
+<img src="http://i.imgur.com/5fbbZ9Y.gifv"/>
 
 
 Pull requests are very cool
