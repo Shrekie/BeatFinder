@@ -1,4 +1,4 @@
-# BeatFinder
+# Beat Finder
 Find the name of any music playing in your browser.
 
 Can't find the name of a song you've heard online:
