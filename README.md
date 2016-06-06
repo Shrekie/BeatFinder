@@ -31,4 +31,7 @@ https://nnattawat.github.io/flip/
 
 <a href="https://www.thomaslindauer.com" target="blank">Team page<a>
 
+Here is an article i wrote about this project
+https://www.acrcloud.com/blog/how-to-make-a-chrome-music-finder-extension
+
 Pull requests are very cool
