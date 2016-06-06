@@ -12,7 +12,8 @@ Detects music with incredible accuracy and gives all the information you need to
 It’s 100% free
 
 No data regarding the persons using this plugin is saved at any point.
-No audio retrieved using this plugin is stored at any point, it is only processed.
+Only 5 song names are stored in the cache, for easy re-discovery.
+No audio files are stored, they are only processed to retrieve song name results.
 
 Music Recognition by ACRCloud
 https://www.acrcloud.com/
