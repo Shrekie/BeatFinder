@@ -1,4 +1,5 @@
 # Beat Finder
+<pre>
 Find the name of any music playing in your browser.
 
 Can't find the name of a song you've heard online:
@@ -13,32 +14,24 @@ It’s 100% free
 No data regarding the persons using this plugin is saved at any point.
 Only 5 song names are stored in the cache, for easy re-discovery.
 No audio files are stored, they are only processed to retrieve song name results.
+</pre>
 
-Music Recognition by ACRCloud
-https://www.acrcloud.com/
+<a href="https://www.acrcloud.com/" target="blank">Music Recognition by ACRCloud<a>
 
+<a href="https://developer.chrome.com/extensions/tabCapture" target="blank">Record chrome tab<a>
 
-Great library to use for recording of google tab stream:
-https://github.com/streamproc/MediaStreamRecorder
+<a href="https://github.com/streamproc/MediaStreamRecorder" target="blank">Recording of google tab stream<a>
 
-Use this call to record chrome tab:
-https://developer.chrome.com/extensions/tabCapture
-
-I must also mention this for the flip:
-https://nnattawat.github.io/flip/
-
-
+<a href="https://nnattawat.github.io/flip/" target="blank">The flip animation<a>
 
 <a href="https://chrome.google.com/webstore/detail/beatfinder/ndenpgejcjbklgdhdhimhdbfbcnbknpg" target="blank">Store<a>
 
 <a href="https://www.thomaslindauer.com" target="blank">Team page<a>
 
-
-
-Here is an article i wrote about this project
-https://www.acrcloud.com/blog/how-to-make-a-chrome-music-finder-extension
-
-<img src="http://i.imgur.com/5fbbZ9Y.gif"/>
-
+<a href="https://www.acrcloud.com/blog/how-to-make-a-chrome-music-finder-extension" target="blank">Article i wrote about this project<a>
 
 Pull requests are very cool
+
+<h1>Demo</h1>
+<img src="http://i.imgur.com/5fbbZ9Y.gif"/>
+
