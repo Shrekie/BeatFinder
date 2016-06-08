@@ -1,4 +1,7 @@
 # Beat Finder
+This is a Chrome browser extension, check out the <a href="https://www.thomaslindauer.com" target="_blank">team page<a> for credits.
+
+<h2>Store description</h2>
 <pre>
 Find the name of any music playing in your browser.
 
@@ -16,23 +19,26 @@ Only 5 song names are stored in the cache, for easy re-discovery.
 No audio files are stored, they are only processed to retrieve song name results.
 </pre>
 </br>
+
+<h2>Related links</h2>
 <a href="https://www.acrcloud.com/" target="blank">Music Recognition by ACRCloud<a>
 
-<a href="https://developer.chrome.com/extensions/tabCapture" target="blank">Capture Chrome tab<a>
+<a href="https://developer.chrome.com/extensions/tabCapture" target="_blank">Capture Chrome tab<a>
 
-<a href="https://github.com/streamproc/MediaStreamRecorder" target="blank">Record Chrome tab stream<a>
+<a href="https://github.com/streamproc/MediaStreamRecorder" target="_blank">Record Chrome tab stream<a>
 
-<a href="https://nnattawat.github.io/flip/" target="blank">Flip animation<a>
+<a href="https://nnattawat.github.io/flip/" target="_blank">Flip animation<a>
 
-<a href="http://handlebarsjs.com/" target="blank">Handlebars<a>
+<a href="http://handlebarsjs.com/" target="_blank">Handlebars<a>
 
-<a href="https://chrome.google.com/webstore/detail/beatfinder/ndenpgejcjbklgdhdhimhdbfbcnbknpg" target="blank">Store<a>
+<a href="https://chrome.google.com/webstore/detail/beatfinder/ndenpgejcjbklgdhdhimhdbfbcnbknpg" target="_blank">Store<a>
 
-<a href="https://www.thomaslindauer.com" target="blank">Team page<a>
+<a href="https://www.thomaslindauer.com" target="_blank">Team page<a>
 
-<a href="https://www.acrcloud.com/blog/how-to-make-a-chrome-music-finder-extension" target="blank">Article I wrote about this project<a>
+<a href="https://www.acrcloud.com/blog/how-to-make-a-chrome-music-finder-extension" target="_blank">Article I wrote about this project<a>
 
-Pull requests are very cool
-<h1>Demo</h1>
+
+<h2>Demo</h2>
 <img src="http://i.imgur.com/5fbbZ9Y.gif"/>
 
+<p><i>Pull requests are very cool</i>.</p>
