@@ -1,5 +1,9 @@
 # Beat Finder
-This is a Chrome browser extension, check out the <a href="https://www.thomaslindauer.com" target="_blank">team page<a> for credits.
+
+<p><i>I recently decided to make a Chrome plugin that can identify songs playing in your browser, I’ve discovered a method of developing recognition plugins for Chrome painlessly that I’d like to share.</i>.</p>
+<a href="https://www.acrcloud.com/blog/how-to-make-a-chrome-music-finder-extension" target="_blank">Article I wrote about this project<a>
+
+Check out the <a href="https://www.thomaslindauer.com" target="_blank">team page<a> for credits.
 
 <h2>Store description</h2>
 <pre>
