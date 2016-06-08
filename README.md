@@ -18,7 +18,6 @@ No data regarding the persons using this plugin is saved at any point.
 Only 5 song names are stored in the cache, for easy re-discovery.
 No audio files are stored, they are only processed to retrieve song name results.
 </pre>
-</br>
 
 <h2>Related links</h2>
 <a href="https://www.acrcloud.com/" target="blank">Music Recognition by ACRCloud<a>
