@@ -18,17 +18,17 @@ No audio files are stored, they are only processed to retrieve song name results
 
 <a href="https://www.acrcloud.com/" target="blank">Music Recognition by ACRCloud<a>
 
-<a href="https://developer.chrome.com/extensions/tabCapture" target="blank">Record Chrome tab<a>
+<a href="https://developer.chrome.com/extensions/tabCapture" target="blank">Capture Chrome tab<a>
 
-<a href="https://github.com/streamproc/MediaStreamRecorder" target="blank">Recording of Google tab stream<a>
+<a href="https://github.com/streamproc/MediaStreamRecorder" target="blank">Record Chrome tab stream<a>
 
-<a href="https://nnattawat.github.io/flip/" target="blank">The flip animation<a>
+<a href="https://nnattawat.github.io/flip/" target="blank">Flip animation<a>
 
 <a href="https://chrome.google.com/webstore/detail/beatfinder/ndenpgejcjbklgdhdhimhdbfbcnbknpg" target="blank">Store<a>
 
 <a href="https://www.thomaslindauer.com" target="blank">Team page<a>
 
-<a href="https://www.acrcloud.com/blog/how-to-make-a-chrome-music-finder-extension" target="blank">Article i wrote about this project<a>
+<a href="https://www.acrcloud.com/blog/how-to-make-a-chrome-music-finder-extension" target="blank">Article I wrote about this project<a>
 
 Pull requests are very cool
 <h1>Demo</h1>
