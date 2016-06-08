@@ -15,7 +15,7 @@ No data regarding the persons using this plugin is saved at any point.
 Only 5 song names are stored in the cache, for easy re-discovery.
 No audio files are stored, they are only processed to retrieve song name results.
 </pre>
-
+</br>
 <a href="https://www.acrcloud.com/" target="blank">Music Recognition by ACRCloud<a>
 
 <a href="https://developer.chrome.com/extensions/tabCapture" target="blank">Capture Chrome tab<a>
@@ -23,6 +23,8 @@ No audio files are stored, they are only processed to retrieve song name results
 <a href="https://github.com/streamproc/MediaStreamRecorder" target="blank">Record Chrome tab stream<a>
 
 <a href="https://nnattawat.github.io/flip/" target="blank">Flip animation<a>
+
+<a href="http://handlebarsjs.com/" target="blank">Handlebars<a>
 
 <a href="https://chrome.google.com/webstore/detail/beatfinder/ndenpgejcjbklgdhdhimhdbfbcnbknpg" target="blank">Store<a>
 
