@@ -20,22 +20,24 @@ No audio files are stored, they are only processed to retrieve song name results
 </pre>
 
 <h2>Related links</h2>
-<a href="https://www.acrcloud.com/" target="blank">Music Recognition by ACRCloud<a>
 
-<a href="https://developer.chrome.com/extensions/tabCapture" target="_blank">Capture Chrome tab<a>
+<ul>
+<li><a href="https://www.acrcloud.com/" target="blank">Music Recognition by ACRCloud<a></li>
 
-<a href="https://github.com/streamproc/MediaStreamRecorder" target="_blank">Record Chrome tab stream<a>
+<li><a href="https://developer.chrome.com/extensions/tabCapture" target="_blank">Capture Chrome tab<a> - Use the chrome.tabCapture API to interact with tab media streams.</li>
 
-<a href="https://nnattawat.github.io/flip/" target="_blank">Flip animation<a>
+<li><a href="https://github.com/streamproc/MediaStreamRecorder" target="_blank">Record Chrome tab stream<a> - Cross browser audio/video/screen recording.</li>
 
-<a href="http://handlebarsjs.com/" target="_blank">Handlebars<a>
+<li><a href="https://nnattawat.github.io/flip/" target="_blank">Flip animation<a> - Flips desired element.</li>
 
-<a href="https://chrome.google.com/webstore/detail/beatfinder/ndenpgejcjbklgdhdhimhdbfbcnbknpg" target="_blank">Store<a>
+<li><a href="http://handlebarsjs.com/" target="_blank">Handlebars<a></li>
 
-<a href="https://www.thomaslindauer.com" target="_blank">Team page<a>
+<li><a href="https://chrome.google.com/webstore/detail/beatfinder/ndenpgejcjbklgdhdhimhdbfbcnbknpg" target="_blank">Store<a></li>
 
-<a href="https://www.acrcloud.com/blog/how-to-make-a-chrome-music-finder-extension" target="_blank">Article I wrote about this project<a>
+<li><a href="https://www.thomaslindauer.com" target="_blank">Team page<a></li>
 
+<li><a href="https://www.acrcloud.com/blog/how-to-make-a-chrome-music-finder-extension" target="_blank">Article I wrote about this project<a></li>
+</ul> 
 
 <h2>Demo</h2>
 <img src="http://i.imgur.com/5fbbZ9Y.gif"/>
