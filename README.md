@@ -1,7 +1,7 @@
 # Beat Finder
 
-<p><i>Chrome plugin that can identify songs playing in your browser.</i>.</p>
-<a href="https://www.acrcloud.com/blog/how-to-make-a-chrome-music-finder-extension" target="_blank">Article I wrote about this project<a>
+<p><i>Chrome plugin that can identify songs playing in your browser.</i></p>
+<a href="https://www.acrcloud.com/blog/how-to-make-a-chrome-music-finder-extension" target="_blank">Article about this project<a>
 
 Check out the <a href="https://www.thomaslindauer.com" target="_blank">team page<a> for credits.
 
@@ -40,7 +40,7 @@ No audio files are stored, they are only processed to retrieve song name results
 
 <li><a href="https://www.thomaslindauer.com" target="_blank">Team page<a></li>
 
-<li><a href="https://www.acrcloud.com/blog/how-to-make-a-chrome-music-finder-extension" target="_blank">Article I wrote about this project<a></li>
+<li><a href="https://www.acrcloud.com/blog/how-to-make-a-chrome-music-finder-extension" target="_blank">Article about this project<a></li>
 </ul> 
 
 <h2>Demo</h2>
