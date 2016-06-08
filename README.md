@@ -1,10 +1,11 @@
 # Beat Finder
-https://github.com/Shrekie/BeatFinder
 
 <p><i>Chrome extension that can identify songs playing in your browser.</i></p>
 <a href="https://www.acrcloud.com/blog/how-to-make-a-chrome-music-finder-extension" target="_blank">Article about this project<a>
 
 Check out the <a href="https://www.thomaslindauer.com" target="_blank">team page<a> for credits.
+
+https://github.com/Shrekie/BeatFinder
 
 <h2>Store description</h2>
 <pre>
