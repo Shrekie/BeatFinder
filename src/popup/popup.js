@@ -136,6 +136,9 @@ $(window).load(function(){
 			$("#loading-anim").fadeOut("slow");
 			chrome.tabs.create({url:'chrome://chrome-signin/'});	
 		}
+		if(request.order == "stillLoading"){
+			popupUtil.displayText("Still waiting for response, make sure you are logged into the Chrome browser. chrome://chrome-signin/");
+		}
 	});
  
  });

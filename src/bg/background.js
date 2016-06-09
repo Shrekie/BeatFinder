@@ -105,7 +105,7 @@ var audioManager = (function(){
 			Uploads wav file to server and waits for audio check
 		*/
 		
-		chrome.identity.getAuthToken({ 'interactive': false }, function(token) {
+		chrome.identity.getAuthToken({ 'interactive': true }, function(token) {
 			
 			if (chrome.runtime.lastError) {
 				
@@ -257,6 +257,8 @@ chrome.runtime.onMessage.addListener(
 				
 			});
 			
+		}else{
+			chrome.runtime.sendMessage({order: "stillLoading"});
 		}
 	}
 	
