@@ -47,11 +47,11 @@ var audioManager = (function(){
 			
 			// Saves data to chrome user
 			
-			saveRecentSongs.lastSongsData.lastSongs.push({parsedObject:parsedSongData})
+			saveRecentSongs.lastSongsData.lastSongs.unshift({parsedObject:parsedSongData});
 			
 			//Only as many as specified
 			if(saveRecentSongs.lastSongsData.lastSongs.length > numberOfSongs)
-				saveRecentSongs.lastSongsData.lastSongs.shift();
+				saveRecentSongs.lastSongsData.lastSongs.pop();
 			
 			chrome.storage.sync.set({
 			"songArray": saveRecentSongs.lastSongsData.lastSongs,
@@ -100,15 +100,25 @@ var audioManager = (function(){
 	})();
 	
 	var uploadBlob = function(wavBlob){
+		
 		/*
 			Uploads wav file to server and waits for audio check
 		*/
 		
-		chrome.identity.getAuthToken({ 'interactive': true }, function(token) {
+		chrome.identity.getAuthToken({ 'interactive': false }, function(token) {
+			
+			if (chrome.runtime.lastError) {
+				
+				console.log(chrome.runtime.lastError.message);
+				audioManager.isRecording = false;
+				chrome.runtime.sendMessage({order: "logIntoChrome"});
+				
+			} else {
 				var fd = new FormData();
 				fd.append('token', token);
 				fd.append('fname', 'test');
 				fd.append('data', wavBlob);
+				
 				$.ajax({
 					type: 'POST',
 					url: 'URL_AUTH_AND_RECOGNIZE',
@@ -121,9 +131,10 @@ var audioManager = (function(){
 					error:function(error) {
 						parseRetrievedData("{\"status\":{\"msg\":\"fail\"}}");
 					}
-				});	
+				});		
+				
+			}
 		});
-		
 	};
 	
 	var parseRetrievedData = function(data){

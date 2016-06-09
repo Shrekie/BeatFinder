@@ -106,8 +106,7 @@ $(window).load(function(){
 		
 		if(request.order == "lostFocus"){
 			$("#loading-anim").fadeOut("slow");
-			$("#audioInfo").html("<div>Lost focus on this tab, please click inside window first.</div>")
-			$("#audioInfo").slideDown("slow");
+			popupUtil.displayText("Lost focus on this tab, please click inside window first.");
 		}
 		
 		if(request.order == "pleaseTryAgain"){
@@ -133,7 +132,10 @@ $(window).load(function(){
 			popupUtil.insertAudioData(request.audioStringData);
 			
 		}
-		
+		if(request.order == "logIntoChrome"){
+			$("#loading-anim").fadeOut("slow");
+			chrome.tabs.create({url:'chrome://chrome-signin/'});	
+		}
 	});
  
  });
