@@ -120,7 +120,6 @@ $(window).load(function(){
 		}
 		
 		if(request.order == "insertAudioData"){
-			
 			$("#loading-anim").fadeOut("slow");
 			$("#logoFlip").flip("toggle");
 			popupUtil.insertAudioData(request.audioStringData);
@@ -132,14 +131,19 @@ $(window).load(function(){
 			popupUtil.insertAudioData(request.audioStringData);
 			
 		}
+		
 		if(request.order == "logIntoChrome"){
 			$("#loading-anim").fadeOut("slow");
 		}
+		
 		if(request.order == "stillLoading"){
+			
 			popupUtil.displayText("Still waiting for response, this should take 8-15 seconds. </br></br>Make sure you are logged into the Chrome browser: <a  id=\"chromeLogin\" href=\"#\">chrome://chrome-signin/</a>");
+			
 			$("#chromeLogin").click(function(){
 				chrome.tabs.create({url:'chrome://chrome-signin/'});
 			})
+			
 		}
 	});
  

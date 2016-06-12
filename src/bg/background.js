@@ -151,9 +151,11 @@ var audioManager = (function(){
 			chrome.runtime.sendMessage({order: "pleaseTryAgain"});
 		}
 		else if(parsedObjectStringData.status.msg == "Success"){
+			
 			audioManager.lastFoundSong = parsedObjectStringData;
 			chrome.runtime.sendMessage({order: "insertAudioData",audioStringData:parsedObjectStringData});
 			saveRecentSongs.saveSong(parsedObjectStringData);
+			
 		}
 		else{
 			chrome.runtime.sendMessage({order: "nothingFound"});
