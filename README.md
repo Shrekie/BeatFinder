@@ -38,8 +38,6 @@ No audio files are stored, they are only processed to retrieve song name results
 
 <li><a href="https://chrome.google.com/webstore/detail/beatfinder/ndenpgejcjbklgdhdhimhdbfbcnbknpg" target="_blank">Store<a></li>
 
-<li><a href="https://www.thomaslindauer.com" target="_blank">Team page<a></li>
-
 <li><a href="https://www.acrcloud.com/blog/how-to-make-a-chrome-music-finder-extension" target="_blank">Article about this project<a></li>
 </ul> 
 
