@@ -44,4 +44,5 @@ No audio files are stored, they are only processed to retrieve song name results
 <h2>Demo</h2>
 <img src="http://i.imgur.com/5fbbZ9Y.gif"/>
 
-<p><i>Pull requests are very cool</i>.</p>
+<p>This project is now defunct, rights have been given over to <a href="https://chrome.google.com/webstore/detail/aha-music-music-identifie/dpacanjfikmhoddligfbehkpomnbgblf" target="blank">Aha Music Finder<a></p>
+
